@@ -9,7 +9,7 @@ interface FindCarriersInput {
 export class CarrierService {
   public constructor() {}
 
-  public findCarriersByFilters(queryInput: FindCarriersInput): Carrier[] {
+  public getFilteredCarriers(queryInput: FindCarriersInput): Carrier[] {
     return this.getCarriers(queryInput.stateCode, queryInput.insuranceType);
   }
 

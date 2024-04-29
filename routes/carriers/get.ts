@@ -37,7 +37,7 @@ export const getCarriersByStateAndInsuranceType: Router = Router({
   }),
   (req: Request, res: Response) => {
     const { stateCode, insuranceType } = <Query>req.query;
-    const carriers = carrierServiceInstance.findCarriersByFilters({
+    const carriers = carrierServiceInstance.getFilteredCarriers({
       stateCode: stateCode,
       insuranceType: insuranceType,
     });
